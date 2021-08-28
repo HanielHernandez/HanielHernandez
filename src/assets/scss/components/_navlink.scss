@@ -1,0 +1,24 @@
+.nav-link{
+  position: relative;
+  display: inline-block;
+  &:hover{
+    transform: translateY(-4px);
+  }
+  &:after {
+    background-color: $primary;
+    content: "";
+    position: absolute;
+    top: calc(100% + 4px) ;
+    left: 50%;
+    border-radius: 300px;
+    transition: all 0.3s ease-in-out;
+    transform:  translateX(-50%);
+    width: 0%;
+    height: 4px;
+  }
+  &.active{
+    &:after {
+      width:100%;
+    }
+  }
+}

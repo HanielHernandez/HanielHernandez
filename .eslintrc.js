@@ -16,6 +16,7 @@ module.exports = {
     'prettier/prettier': [
       'warn',
       {
+        'endOfLine': 'auto',
         singleQuote: true,
         semi: false,
         trailingComma: 'none'
