@@ -3,7 +3,12 @@
     :class="{ dark: darkmode, 'bg-gray-900': darkmode }"
     class="transition-all ease-in-out duration-300"
   >
-    <the-navbar id="navbar" :class="{ dark: darkmode }" />
+    <the-navbar
+      id="navbar"
+      :dark-mode="darkmode"
+      :class="{ dark: darkmode }"
+      @onChangeLightMode="changeLightMode"
+    />
     <div
       class="container container-xl mx-auto h-screen"
       style="padding-top: 84px"
@@ -15,7 +20,7 @@
           @enter="onTransitionEnter"
           @leave="onTransitionLeave"
         >
-          <component :is="Component" ref="component"></component>
+          <component :is="Component" ref="component" />
         </transition>
       </router-view>
     </div>
@@ -43,6 +48,9 @@ const onTransitionEnter = (el, done) => {
 }
 const onTransitionLeave = (el, done) => {
   animations[oldRoute.value.toLowerCase()].onLeave(el, done)
+}
+const changeLightMode = () => {
+  darkmode.value = darkmode.value == true ? false : true
 }
 </script>
 <style lang="scss"></style>

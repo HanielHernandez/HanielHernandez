@@ -4,7 +4,6 @@ export default {
   mywork,
   home: {
     onEnter: (el, done) => {
-      console.log('Entra ala animación', el, done)
       const tl = gsap.timeline({
         onComplete: done
       })

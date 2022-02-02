@@ -40,7 +40,7 @@
             py-3
           "
         >
-          My work
+          {{ $t('home.myWorkBtn') }}
         </a>
         <a
           href=""

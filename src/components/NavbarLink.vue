@@ -4,8 +4,11 @@
     :v-bind="$attrs"
     href=""
     class="
-      px-4
-      text-md
+      px-6
+      py-4
+      md:px-4 md:py-0
+      text-center text-2xl
+      md:text-md
       nav-link
       font-bold
       dark:text-white dark:hover:text-gray-100
