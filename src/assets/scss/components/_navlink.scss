@@ -1,27 +1,10 @@
 .nav-link{
-  position: relative;
-  display: inline-block;
-  &:not(.active){
-    &:hover{
-      opacity: 0.75;
-    }
+  @apply opacity-50;
+  &:hover{
+    @apply opacity-100;
   }
- 
-  &:after {
-    background-color: $primary;
-    content: "";
-    position: absolute;
-    top: calc(100% + 4px) ;
-    left: 50%;
-    border-radius: 300px;
-    transition: all 0.75s ease-in-out;
-    transform:  translateX(-50%);
-    width: 0%;
-    height: 4px;
-  }
-  &.active{
-    &:after {
-      width: calc(100% - 3rem);
-    }
+  @apply inline-block;
+  &-container{
+    display: block;
   }
 }

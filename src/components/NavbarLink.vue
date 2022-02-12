@@ -6,11 +6,13 @@
     class="
       px-6
       py-4
+      text-2xl
       md:px-4 md:py-0
-      text-center text-2xl
-      md:text-md
+      text-center
       nav-link
-      font-bold
+      md:text-base
+      hover:opacity-90
+      font-medium
       dark:text-white dark:hover:text-gray-100
       hover:text-gray-600
       text-gray-900
@@ -40,4 +42,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nav-link {
+  &.active {
+    @apply opacity-100;
+    @apply text-blue-600;
+  }
+}
+</style>
