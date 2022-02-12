@@ -7,6 +7,7 @@ import './assets/scss/main.scss'
 import globals from './components/globals'
 import config from './config'
 import { i18n } from './i18n/i18n'
+import './assets/tailwind.css'
 
 const app = createApp(App)
 app.provide('config', config)

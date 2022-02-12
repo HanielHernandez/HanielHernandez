@@ -1,14 +1,7 @@
 <script setup></script>
 <template>
   <div
-    class="
-      flex flex-col flex-wrap
-      md:justify-start
-      justify-center
-      section
-      h-screen
-      mx-4
-    "
+    class="flex flex-col flex-wrap md:justify-start justify-center section h-screen mx-4"
   >
     <div class="w-full md:w-1/2 py-4">
       <img

@@ -1,16 +1,6 @@
 <template>
   <div
-    class="
-      fixed
-      z-50
-      top-0
-      left-0
-      p-3
-      lg:p-6
-      flex
-      w-full
-      bg-white bg-opacity-90
-    "
+    class="fixed z-50 top-0 left-0 p-3 lg:p-6 flex w-full bg-white bg-opacity-90"
   >
     <div class="container mx-auto">
       <div class="flex w-full md:flex-row justify-between items-center">
@@ -21,14 +11,7 @@
         <div>
           <ul
             id="navMenu"
-            class="
-              hidden
-              transitions
-              md:shadow-none md:py-0
-              w-100
-              md:flex
-              dark:text-white
-            "
+            class="hidden transitions md:shadow-none md:py-0 w-100 md:flex dark:text-white"
           >
             <li
               v-for="(route, index) in routes"
@@ -57,18 +40,7 @@
     <transition :css="false" mode="out-in" @enter="onEnter" @leave="onLeave">
       <div
         v-if="menuOpen"
-        class="
-          menu
-          z-40
-          ease-out
-          bg-white
-          w-screen
-          h-screen
-          bg-opacity-90
-          fixed
-          top-0
-          left-0
-        "
+        class="menu z-40 ease-out bg-white w-screen h-screen bg-opacity-90 fixed top-0 left-0"
       >
         <ul class="flex h-full flex-col justify-center items-center">
           <li
