@@ -12,11 +12,11 @@
         Lorem ipsum dolor
       </h2>
       <h1
-        class="font-black text-5xl md:text-6xl lg:text-7xl mb-8 text-neutral-800 md:mb-12 dark:text-white"
+        class="font-black text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-800 md:mb-12 dark:text-white"
       >
         Lorem ipsum dolor
       </h1>
-      <p class="text-neutral-600 mb-8">
+      <p class="text-gray-600 mb-8">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nisi
         excepturi ratione aliquid repellat esse ad ipsum quasi! Perspiciatis,
         nostrum nobis! Eveniet reprehenderit quidem excepturi quisquam
@@ -24,17 +24,15 @@
       </p>
       <div class="flex items-center">
         <a
-          href=""
+          href
           class="bg-blue-600 md:text-lg lg:text-2xl font-bold transition-all ease-in-out btn shadow-md duration-300 hover:bg-blue-800 mr-4 border-ra text-white px-4 py-3 md:px-5 md:py-4 lg:px-6 lg:py-5 rounded-sm"
+          >{{ $t('home.myWorkBtn') }}</a
         >
-          {{ $t('home.myWorkBtn') }}
-        </a>
         <a
-          href=""
+          href
           class="border border-blue-600 md:text-lg lg:text-2xl font-bold btn transition-all ease-in-out rounded-sm duration-300 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-3 md:px-5 md:py-4 lg:px-6 lg:py-5"
+          >{{ $t('contactMe') }}</a
         >
-          {{ $t('contactMe') }}
-        </a>
       </div>
     </div>
     <div
@@ -42,7 +40,7 @@
     >
       <img
         src="https://via.placeholder.com/450x450"
-        alt=""
+        alt
         class="w-full h-auto"
       />
     </div>
