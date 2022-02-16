@@ -1,8 +1,8 @@
 <template>
   <section-container>
     <div
-      class="flex flex-col-reverse md:flex-row justify-center flex-nowrap md:justify-start section h-full"
-      :class="[backgroundColor]"
+      class="flex flex-col-reverse md:flex-row md:py-16 justify-center flex-nowrap md:justify-start"
+      style="height: 100%"
     >
       <div
         id="rightSide"
@@ -11,18 +11,15 @@
         <h2
           class="text-2xl font-bold md:text-4xl text-blue-600 mb-8 md:mb-12 dark:text-white"
         >
-          Lorem ipsum dolor
+          {{ $t('home.firstLine') }}
         </h2>
         <h1
-          class="font-black text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-800 md:mb-12 dark:text-white"
+          class="leading-tight font-black text-5xl md:text-6xl lg:text-7xl mb-8 text-gray-800 md:mb-12 dark:text-white"
         >
-          Lorem ipsum dolor
+          {{ $t('home.secondLine') }}
         </h1>
-        <p class="text-gray-600 mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nisi
-          excepturi ratione aliquid repellat esse ad ipsum quasi! Perspiciatis,
-          nostrum nobis! Eveniet reprehenderit quidem excepturi quisquam
-          laudantium nostrum quod necessitatibus.
+        <p class="text-gray-600 mb-8" style="max-width: 650px">
+          {{ $t('home.paragraph') }}
         </p>
         <div class="flex items-center">
           <a
@@ -40,7 +37,7 @@
       <div
         class="flex justify-center items-center w-full md:w-1/2 md:h-full px-4"
       >
-        <img src="assets/img/home_logo_svg" alt class="w-full h-auto" />
+        <img src="../assets/img/home_graph.svg" class="w-full h-auto" />
       </div>
     </div>
   </section-container>
@@ -48,13 +45,6 @@
 
 <script setup>
 import SectionContainer from '../components/SectionContainer.vue'
-
-defineProps({
-  backgroundColor: {
-    type: String,
-    default: () => ''
-  }
-})
 </script>
 <style lang="scss">
 .section {

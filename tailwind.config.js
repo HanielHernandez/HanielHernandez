@@ -19,10 +19,10 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink
     },
-    extend: {},
+    extend: {}
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }
