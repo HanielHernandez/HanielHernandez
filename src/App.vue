@@ -1,28 +1,22 @@
 <template>
   <div :class="{ dark: darkmode, 'bg-gray-900': darkmode }">
-    <div
-      class="container container-xl mx-auto h-screen w-screen"
-      style="padding-top: 84px"
+    <the-navbar
+      v-if="routeName != 'MyCv'"
+      id="navbar"
+      :dark-mode="darkmode"
       :class="{ dark: darkmode }"
-    >
-      <the-navbar
-        v-if="routeName != 'MyCv'"
-        id="navbar"
-        :dark-mode="darkmode"
-        :class="{ dark: darkmode }"
-        @onChangeLightMode="changeLightMode"
-      />
-      <Home />
-      <about-me-section />
-      <my-work-section />
-      <!-- <transition
+      @onChangeLightMode="changeLightMode"
+    />
+    <Home />
+    <about-me-section />
+    <my-work-section />
+    <!-- <transition
           mode="out-in"
           @enter="onTransitionEnter"
           @leave="onTransitionLeave"
         >
           <component :is="Component" ref="component" />
         </transition> -->
-    </div>
   </div>
 </template>
 <script setup>
