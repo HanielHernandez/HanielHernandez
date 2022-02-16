@@ -20,7 +20,7 @@
               class="nav-link-container text-center"
             >
               <navbar-link
-                :to="route.route"
+                :href="route.route"
                 :active="currentRoute == route.route.name"
               >
                 {{ $t(route.text) }}

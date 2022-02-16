@@ -1,10 +1,8 @@
 <template>
-  <div
-    class="container container-xl mx-auto h-screen w-screen"
-    style="padding-top: 84px"
-  >
+  <section-container>
     <div
       class="flex flex-col-reverse md:flex-row justify-center flex-nowrap md:justify-start section h-full"
+      :class="[backgroundColor]"
     >
       <div
         id="rightSide"
@@ -42,38 +40,21 @@
       <div
         class="flex justify-center items-center w-full md:w-1/2 md:h-full px-4"
       >
-        <img
-          src="https://via.placeholder.com/450x450"
-          alt
-          class="w-full h-auto"
-        />
+        <img src="assets/img/home_logo_svg" alt class="w-full h-auto" />
       </div>
     </div>
-  </div>
+  </section-container>
 </template>
 
-<script>
-export default {
-  name: 'Home',
-  props: {
-    el: {
-      type: Object,
-      default: () => {
-        return {}
-      }
-    },
-    done: {
-      type: Function,
-      default: () => {
-        return () => {}
-      }
-    }
-  },
-  setup() {},
-  mounted() {
-    console.log()
+<script setup>
+import SectionContainer from '../components/SectionContainer.vue'
+
+defineProps({
+  backgroundColor: {
+    type: String,
+    default: () => ''
   }
-}
+})
 </script>
 <style lang="scss">
 .section {

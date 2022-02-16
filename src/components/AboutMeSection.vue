@@ -1,9 +1,9 @@
 <script setup></script>
 <template>
-  <div class="h-screen w-screen bg-blue-600 bg-opacity-10">
+  <div id="about_me" class="h-screen w-screen bg-blue-600 bg-opacity-10">
     <div class="container container-xl mx-auto">
       <div
-        class="flex flex-col md:flex-row md:justify-start justify-center items-center section h-screen mx-4"
+        class="flex flex-col md:flex-row md:justify-between justify-center items-center section h-screen mx-4"
       >
         <div class="w-full md:w-1/2 py-4">
           <img

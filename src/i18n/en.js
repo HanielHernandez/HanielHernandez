@@ -11,5 +11,9 @@ export default {
   },
   email: 'Email',
   education: 'Education',
-  position: 'Front End Developer'
+  position: 'Front End Developer',
+  myWork: {
+    title: 'My Work',
+    subtitle: "Here are some projects I've worked on"
+  }
 }

@@ -6,7 +6,7 @@ export default {
     },
     {
       text: 'navbar.aboutMe',
-      route: { name: 'About' }
+      route: '#about_me'
     },
     {
       text: 'navbar.myWork',

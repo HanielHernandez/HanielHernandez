@@ -11,5 +11,9 @@ export default {
   },
   email: 'Email',
   education: 'Educación',
-  position: 'Desarrollador Front End'
+  position: 'Desarrollador Front End',
+  myWork: {
+    title: 'Mi Trabajo',
+    subtitle: 'Estos son algunos proyectos en los que he trabajado'
+  }
 }
