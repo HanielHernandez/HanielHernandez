@@ -1,33 +1,50 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div :class="{ dark: darkmode, 'bg-gray-900': darkmode }">
+    <!-- <the-navbar
+      v-if="routeName != 'MyCv'"
+      id="navbar"
+      :dark-mode="darkmode"
+      :class="{ dark: darkmode }"
+      @on-change-light-mode="changeLightMode"
+    /> -->
+
+    <router-view />
+
+    <!-- <Home />
+    <about-me-section />
+    <my-work-section /> -->
+    <!-- <transition
+          mode="out-in"
+          @enter="onTransitionEnter"
+          @leave="onTransitionLeave"
+        >
+          <component :is="Component" ref="component" />
+        </transition> -->
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
+<script lang="ts" setup>
+// import animations from '@/animations'
+import { ref } from 'vue'
+// import { useRoute } from 'vue-router'
+// import Home from './views/Home.vue'
+// import AboutMeSection from './components/AboutMeSection.vue'
+// import MyWorkSection from './components/MyWorkSection.vue'
+//const route = useRoute()
+const darkmode = ref(false)
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
+// const routeName = computed(() => {
+//   return route.name
+// })
+// const currentRoute = ref(route.name)
+// const oldRoute = ref(route.name)
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+// watch(routeName, (newval, oldval) => {
+//   currentRoute.value = newval
+//   oldRoute.value = oldval
+// })
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+// const changeLightMode = () => {
+//   darkmode.value = darkmode.value == true ? false : true
+// }
+</script>
+<style lang="scss"></style>

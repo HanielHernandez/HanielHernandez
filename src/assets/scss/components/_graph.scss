@@ -1,0 +1,20 @@
+.left-side-image{
+  position: relative;
+;
+  .content,.background{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+  }
+  .content{
+    z-index: 20;
+    background-color: $primary;
+  }
+  .background{
+    z-index: 25;
+    background-color: $primary;
+    background-color: rgba($primary,0.5);
+  }
+
+}
+

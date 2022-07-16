@@ -11,7 +11,8 @@ module.exports = {
         endOfLine: 'auto',
         singleQuote: true,
         semi: false,
-        trailingComma: 'none'
+        trailingComma: 'none',
+        arrayExpand: true
       }
     ],
     'generator-star-spacing': 'off',
