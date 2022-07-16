@@ -3,9 +3,15 @@ import { ref } from 'vue'
 
 const experiences = ref([
   {
+    companyName: 'FullStacklabs',
+    from: 'Mar. 2022',
+    to: 'Jul. 2022',
+    position: 'Desarrollador Front End'
+  },
+  {
     companyName: 'AIM services',
     from: 'Feb. 2019',
-    to: 'Actualmente',
+    to: 'Mar. 2022',
     position: 'Desarrollador Front End'
   },
   {
@@ -48,7 +54,7 @@ const education = ref([
     <div class="flex flex-col w-2/3">
       <div class="py-8 px-4 text-center">
         <h1 class="text-3xl font-black">Haniel Hernández</h1>
-        <h5 class="text-xl font-medium">Front end developer</h5>
+        <h5 class="text-xl font-medium text-gray-600">Front end developer</h5>
       </div>
       <div class="pt-8 px-8">
         <h4 class="uppercase font-black text-blue-900 text-xs my-2">

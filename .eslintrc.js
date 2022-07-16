@@ -6,9 +6,9 @@ module.exports = {
 
   },
   extends: [
-    'plugin:vue/vue3-recommended',
     'eslint:recommended',
-    '@vue/prettier'
+    'plugin:vue/vue3-recommended',
+    "prettier"
   ],
   parserOptions: {
     parser: '@babel/eslint-parser',

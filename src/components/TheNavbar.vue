@@ -19,11 +19,8 @@
               :ref="(el) => (links[index] = el)"
               class="nav-link-container text-center"
             >
-              <navbar-link
-                :href="route.route"
-                :active="currentRoute == route.route.name"
-              >
-                {{ $t(route.text) }}
+              <navbar-link :to="route.path">
+                 {{ $t(route.text) }}
               </navbar-link>
             </li>
           </ul>
@@ -49,10 +46,7 @@
             :ref="(el) => (links[index] = el)"
             class="nav-link-container text-center"
           >
-            <navbar-link
-              :to="route.route"
-              :active="currentRoute == route.route.name"
-            >
+            <navbar-link :to="route.path">
               {{ $t(route.text) }}
             </navbar-link>
           </li>

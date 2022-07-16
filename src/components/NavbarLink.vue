@@ -1,8 +1,6 @@
 <template>
   <router-link
     :to="to"
-    :v-bind="$attrs"
-    href
     class="px-6 py-4 text-2xl md:px-4 md:py-0 text-center nav-link md:text-base hover:opacity-90 font-medium dark:text-white dark:hover:text-gray-100 hover:text-gray-600 text-gray-900 transition-all ease-in-out duration-300"
     :class="{ active: active }"
   >

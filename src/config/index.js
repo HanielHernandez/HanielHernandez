@@ -2,15 +2,15 @@ export default {
   navbarRoutes: [
     {
       text: 'navbar.home',
-      route: { name: 'Home' }
+      path: '/'
     },
     {
       text: 'navbar.aboutMe',
-      route: '#about_me'
+      path: '/about'
     },
     {
       text: 'navbar.myWork',
-      route: { name: 'MyWork' }
+      path: '/my-work'
     }
   ]
 }
