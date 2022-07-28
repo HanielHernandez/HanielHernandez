@@ -1,10 +1,14 @@
-.nav-link{
-  @apply opacity-50;
-  &:hover{
-    @apply opacity-100;
-  }
-  @apply inline-block;
-  &-container{
-    display: block;
-  }
+.nav-link {
+	@apply opacity-50;
+	@apply inline-block;
+
+	&:hover {
+		@apply opacity-100;
+	}
+
+	&-container {
+		display: block;
+	}
+
+	&.active {}
 }

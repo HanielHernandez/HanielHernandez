@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-const Home = () => import('../views/Home.vue')
+const Home = () => import('../views/HomePage.vue')
 const AboutMe = () => import('../views/AboutMe.vue')
-const MyWork = () => import('../views/Work.vue')
+const MyWork = () => import('../views/MyWork.vue')
 const MyCV = () => import('../views/CV.vue')
 
 export const routes = [

@@ -1,20 +1,21 @@
 <template>
   <div :class="{ dark: darkmode, 'bg-gray-900': darkmode }">
     <the-navbar
-      v-if="routeName != 'MyCv'"
+      v-if="routeName != 'MyCV'"
       id="navbar"
       :dark-mode="darkmode"
       :class="{ dark: darkmode }"
       @on-change-light-mode="changeLightMode"
     />
-    <router-view></router-view>
+    <div class="w-full mx-auto" style="max-width: 1024px">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
 // import animations from '@/animations'
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import Home from './views/Home.vue'
 
 const route = useRoute()
 const darkmode = ref(false)
