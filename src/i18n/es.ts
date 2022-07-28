@@ -31,7 +31,22 @@ export default {
     title: 'Mi Trabajo',
     subtitle: 'Estos son algunos proyectos en los que he trabajado',
     professionalExperience: {
-      title: 'Experiencia Profesional:'
+      title: 'Experiencia Profesional',
+      fsl: {
+        title: 'Desarrollador Front-End Nivel-Medio',
+        description:
+          'Con Fullstack labs contribuí  arreglando bugs y modificando interfaces de usuarios deacuerdo a diseños previamente establecidos.'
+      },
+      drs: {
+        title: 'Desarrollador Web Junior',
+        description:
+          'En Discover real state estaba acargo de dar mantimiento y crear nuevos modulos a una aplicacion interna creada en Jquery'
+      },
+      aims: {
+        title: 'Desarrollador Front-End',
+        description:
+          'En <b>AIM Services</b> estaba a cargo de:<ul class="list-disc pl-8"> <li>Crear Aplicaciones webs usando frameworks de javascript como Angular y Vue.</li> <li>Crear APIs personalizadas desde cero e integralas con servicios de terceros como Twilio, Paypal, Firebase, Y Pusher.</li> <li>Crear aplicaciones móbiles en Android nativo (Java) así comó híbridas (IONIC)</li> <li>Crear Mockups para definirl la apariencia final de aplicaciones.</li> <li>Planear el desarrollo de los proyectos así cómo la definición de tareas para estos..</li> </ul>  '
+      }
     }
   },
   cv: {

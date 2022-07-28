@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import SectionTitle from './SectionTitle.vue'
 
 const skills = ref([
   {
@@ -60,18 +61,16 @@ const skills = ref([
 <template>
   <div class="py-16 flex flex-wrap">
     <div class="w-full">
-      <h4
-        class="font-bold text-2xl text-gray-900 mb-4 foreground dark:text-white"
-      >
+      <SectionTitle>
         {{ $t('aboutMe.skills.title') }}
-      </h4>
+      </SectionTitle>
     </div>
 
     <div v-for="(skill, index) in skills" :key="`skill-${index}`" class="flex">
       <div class="skill-card relative">
         <img
           :src="skill.icon"
-          class="object-contain w-12 h-12"
+          class="skill-card-icon object-contain w-12 h-12"
           :alt="`${skill.text} icon`"
         />
         <div class="skill-card-text text-white font-bold bg-black/50">
@@ -83,13 +82,18 @@ const skills = ref([
 </template>
 <style lang="scss">
 .skill-card {
-  @apply p-4 mb-4;
+  @apply p-4 mb-4 rounded-md;
   &:hover {
     .skill-card {
+      &-icon {
+        transform: scale(1.25);
+      }
       &-text {
         opacity: 1;
       }
     }
+    background-color: rgba($color: #000000, $alpha: 0.1);
+    transition: all ease-in-out 0.3s;
   }
   &-text {
     opacity: 0;
@@ -98,8 +102,12 @@ const skills = ref([
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    bottom: calc(100% + 0.5rem);
+  }
+
+  &-text,
+  &-icon {
     transition: all ease-in-out 0.3s;
-    bottom: 100%;
   }
 }
 </style>
