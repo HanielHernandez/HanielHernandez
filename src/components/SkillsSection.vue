@@ -50,14 +50,30 @@ const skills = ref([
   {
     icon: 'src/assets/icons/firebase_icon.svg',
     text: 'Firebase'
+  },
+  {
+    icon: 'src/assets/icons/laravel_icon.svg',
+    text: 'Laravel'
   }
 ])
 </script>
 <template>
-  <div class="py-16 flex justify-center">
+  <div class="py-16 flex flex-wrap">
+    <div class="w-full">
+      <h4
+        class="font-bold text-2xl text-gray-900 mb-4 foreground dark:text-white"
+      >
+        {{ $t('aboutMe.skills.title') }}
+      </h4>
+    </div>
+
     <div v-for="(skill, index) in skills" :key="`skill-${index}`" class="flex">
-      <div class="skill-card relative inlin">
-        <img :src="skill.icon" class="w-12 h-12" :alt="`${skill.text} icon`" />
+      <div class="skill-card relative">
+        <img
+          :src="skill.icon"
+          class="object-contain w-12 h-12"
+          :alt="`${skill.text} icon`"
+        />
         <div class="skill-card-text text-white font-bold bg-black/50">
           {{ skill.text }}
         </div>
@@ -67,7 +83,7 @@ const skills = ref([
 </template>
 <style lang="scss">
 .skill-card {
-  @apply p-4;
+  @apply p-4 mb-4;
   &:hover {
     .skill-card {
       &-text {
@@ -83,7 +99,6 @@ const skills = ref([
     transform: translateX(-50%);
     text-align: center;
     transition: all ease-in-out 0.3s;
-
     bottom: 100%;
   }
 }

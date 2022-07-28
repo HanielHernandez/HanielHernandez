@@ -7,7 +7,7 @@
       :class="{ dark: darkmode }"
       @on-change-light-mode="changeLightMode"
     />
-    <div class="w-full mx-auto" style="max-width: 1024px">
+    <div class="w-full mx-auto pt-36" style="max-width: 1024px">
       <router-view></router-view>
     </div>
   </div>

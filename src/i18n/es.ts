@@ -23,13 +23,16 @@ export default {
       'Lo que me gusta del desarrollo front end es que es la parte de una aplicación que interactua con el usuario y le brinda la experiencia final. en cierta manera la considero un arte ya que creas un item en base a tus ideas y creatividad.',
     paragraph3:
       'De ninguna manera me considero un experto en la materia, todavía tengo un largo camino que recorrer en mi aprendizaje como desarrollador, ahora bien, con los ultimos que he trabajado siento que he adquirido conocimiento y experiencia que me qualifican como un desarrollador competente, con facilidad de aprendizaje y resolución de problemas. dispuesto a ayudar a su equipo para lograr las metas propuestas y poder avanzar.',
-    knowlege: {
+    skills: {
       title: 'Mis Conocimientos'
     }
   },
   myWork: {
     title: 'Mi Trabajo',
-    subtitle: 'Estos son algunos proyectos en los que he trabajado'
+    subtitle: 'Estos son algunos proyectos en los que he trabajado',
+    professionalExperience: {
+      title: 'Experiencia Profesional:'
+    }
   },
   cv: {
     sidebar: {
