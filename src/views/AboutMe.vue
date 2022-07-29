@@ -15,7 +15,7 @@ const paragraphs = ref([
       >
         <div class="border-4 rounded-full border-blue-500 border-collapse">
           <img
-            class="rounded-full w-full shadow-md border-white border-4"
+            class="rounded-full w-48 h-48 md:h-auto md:w-full shadow-md border-white border-4"
             src="../assets/img/profile_picture.jpg"
             alt="profile piceture"
           />

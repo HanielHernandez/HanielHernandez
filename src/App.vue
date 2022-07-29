@@ -1,7 +1,7 @@
 <template>
   <div
     class="transition-all ease-in-out duration-300"
-    :class="{ dark: darkmode, 'bg-black/90': darkmode }"
+    :class="{ dark: darkmode, 'bg-neutral-900': darkmode }"
   >
     <the-navbar
       v-if="routeName != 'MyCV'"
@@ -11,7 +11,7 @@
       @on-change-light-mode="changeLightMode"
     />
     <div
-      class="w-full h-screen relative overflow-y-auto overflow-x-hidden mx-auto pt-36 transition-colors ease-in-out duration-300"
+      class="w-full h-screen relative overflow-y-auto oveflow-x-hidden mx-auto pt-36 transition-colors ease-in-out duration-300"
       style="max-width: 1024px"
     >
       <router-view></router-view>

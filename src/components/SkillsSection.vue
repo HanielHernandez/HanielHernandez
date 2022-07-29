@@ -60,7 +60,7 @@ const skills = ref([
 </script>
 <template>
   <div class="py-16 flex flex-wrap">
-    <div class="w-full">
+    <div class="w-full px-4 lg:px-0">
       <SectionTitle>
         {{ $t('aboutMe.skills.title') }}
       </SectionTitle>

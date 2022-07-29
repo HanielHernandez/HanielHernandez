@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-50 top-0 left-0 p-3 lg:p-6 flex w-full dark:bg-black/90 transition-all ease-in-out duration-300 bg-white bg-opacity-90"
+    class="fixed z-50 top-0 left-0 p-3 lg:p-6 flex w-full dark:bg-neutral-900/90 transition-all ease-in-out duration-300 bg-white"
   >
     <div class="mx-auto w-full" style="max-width: 1024px">
       <div class="flex w-full md:flex-row justify-between items-center">
@@ -70,7 +70,7 @@
           />
           <div
             id="line-3"
-            class="border mx-auto rounded-xl dark:border-whiteborder-black w-6"
+            class="border mx-auto rounded-xl dark:border-white border-black w-6"
           />
         </button>
       </div>
@@ -94,6 +94,23 @@
             >
               {{ $t(route.text) }}
             </navbar-link>
+          </li>
+          <li class="nav-link-container text-center py-4">
+            <select
+              id="lang-select"
+              v-model="$i18n.locale"
+              class="transition-all text-xl duration-300 ease-in-out bg-gray-100 dark:bg-gray-600 rounded-sm p-1 font-bold dark:text-white"
+              name="language"
+              @change="setLang($event.target.value)"
+            >
+              <option
+                v-for="locale in $i18n.availableLocales"
+                :key="`locale-${locale}`"
+                :value="locale"
+              >
+                {{ locale.toUpperCase() }}
+              </option>
+            </select>
           </li>
         </ul>
       </div>
@@ -199,7 +216,7 @@ export default {
       )
 
       tl.from(
-        '.nav-link-container',
+        el.getElementsByClassName('nav-link-container'),
         {
           x: '-30px',
           opacity: 0,
@@ -208,6 +225,7 @@ export default {
         },
         0.25
       )
+
       return tl
     }
 
@@ -293,7 +311,7 @@ export default {
         onComplete: done
       })
       tl.to(
-        '.nav-link-container',
+        el.getElementsByClassName('nav-link-container'),
         {
           x: '-30px',
           opacity: 0,
