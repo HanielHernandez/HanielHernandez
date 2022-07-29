@@ -3,7 +3,7 @@ module.exports = {
     node: true
   },
   extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'prettier'],
-  plugins: ['prettier', 'vue'],
+  plugins: ['prettier', 'vue', '@typescript-eslint'],
   rules: {
     'prettier/prettier': [
       'warn',

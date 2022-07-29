@@ -1,4 +1,3 @@
-<script setup lang="ts"></script>
 <template>
   <section-container background-color="bg-blue-600 bg-opacity-10">
     <!-- <div id="about_me" class="h-screen w-screen bg-blue-600 bg-opacity-10">

@@ -54,9 +54,8 @@ import { useRoute } from 'vue-router'
 import { gsap } from 'gsap'
 
 const route = useRoute()
-const modeIcon = ref<HTMLElement>(null)
+const modeIcon = ref<HTMLElement | null>(null)
 const mode = localStorage.getItem('mode')
-
 const darkmode = ref(mode == 'dark')
 
 const routeName = computed(() => {
@@ -64,7 +63,9 @@ const routeName = computed(() => {
 })
 
 onMounted(() => {
-  modeIcon.value.style.backgroundColor = mode == 'dark' ? '#000' : '#FFF'
+  if (modeIcon.value) {
+    modeIcon.value.style.backgroundColor = mode == 'dark' ? '#000' : '#FFF'
+  }
 })
 
 const onSunEnter = (el: HTMLElement, done: () => void) => {
