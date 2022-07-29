@@ -3,7 +3,7 @@ import mywork from './mywork'
 export default {
   mywork,
   home: {
-    onEnter: (el, done) => {
+    onEnter: (el: HTMLElement, done: () => void) => {
       const tl = gsap.timeline({
         onComplete: done
       })
@@ -31,7 +31,7 @@ export default {
 
       tl.play()
     },
-    onLeave: (el, done) => {
+    onLeave: (el: HTMLElement, done: () => void) => {
       console.log('Sale de la animación', el, done)
       const tl = gsap.timeline({
         onComplete: done
@@ -62,7 +62,7 @@ export default {
     }
   },
   about: {
-    onEnter: (el, done) => {
+    onEnter: (el: HTMLElement, done: () => void) => {
       const tl = gsap.timeline({
         onComplete: done
       })
@@ -106,7 +106,7 @@ export default {
       )
       tl.play()
     },
-    onLeave: (el, done) => {
+    onLeave: (el: HTMLElement, done: () => void) => {
       console.log('Sale de la animación', el, done)
       setTimeout(done, 1)
     }
