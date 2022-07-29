@@ -1,1 +1,0 @@
-import{_ as t,c as o,g as r,o as s}from"./index.5ac55f16.js";const c={},n={class:"font-bold text-2xl mb-4 lg:mb-8 text-gray-900 foreground dark:text-white"};function a(e,l){return s(),o("h4",n,[r(e.$slots,"default")])}const d=t(c,[["render",a]]);export{d as S};
