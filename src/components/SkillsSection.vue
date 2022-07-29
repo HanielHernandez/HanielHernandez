@@ -4,56 +4,56 @@ import SectionTitle from './SectionTitle.vue'
 
 const skills = ref([
   {
-    icon: 'src/assets/icons/html_icon.svg',
+    icon: 'img/icons/html_icon.svg',
     text: 'HTML '
   },
   {
-    icon: 'src/assets/icons/css_icon.svg',
+    icon: 'img/icons/css_icon.svg',
     text: 'CSS '
   },
   {
-    icon: 'src/assets/icons/javascript_icon.png',
+    icon: 'img/icons/javascript_icon.png',
     text: 'Javascript '
   },
   {
-    icon: 'src/assets/icons/typescript_icon.png',
+    icon: 'img/icons/typescript_icon.png',
     text: 'Typescript '
   },
   {
-    icon: 'src/assets/icons/sass_icon.png',
+    icon: 'img/icons/sass_icon.png',
     text: 'SASS '
   },
 
   {
-    icon: 'src/assets/icons/vue_icon.svg',
+    icon: 'img/icons/vue_icon.svg',
     text: 'Vue'
   },
   {
-    icon: 'src/assets/icons/angular_icon.svg',
+    icon: 'img/icons/angular_icon.svg',
     text: 'Angular'
   },
   {
-    icon: 'src/assets/icons/react_icon.svg',
+    icon: 'img/icons/react_icon.svg',
     text: 'React'
   },
   {
-    icon: 'src/assets/icons/tailwind_icon.svg',
+    icon: 'img/icons/tailwind_icon.svg',
     text: 'Tailwind'
   },
   {
-    icon: 'src/assets/icons/bootstrap_icon.svg',
+    icon: 'img/icons/bootstrap_icon.svg',
     text: 'Bootstrap'
   },
   {
-    icon: 'src/assets/icons/bulma_icon.png',
+    icon: 'img/icons/bulma_icon.png',
     text: 'Bulma'
   },
   {
-    icon: 'src/assets/icons/firebase_icon.svg',
+    icon: 'img/icons/firebase_icon.svg',
     text: 'Firebase'
   },
   {
-    icon: 'src/assets/icons/laravel_icon.svg',
+    icon: 'img/icons/laravel_icon.svg',
     text: 'Laravel'
   }
 ])
