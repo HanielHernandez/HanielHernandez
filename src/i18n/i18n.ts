@@ -3,11 +3,11 @@ import es from './es'
 import en from './en'
 
 export const i18n = createI18n({
-  locale: navigator.language,
+  locale:
+    localStorage.getItem('lang') ||
+    (navigator.language == 'es-ES' ? 'es' : 'en'),
   messages: {
     es,
-    en,
-    'es-ES': { ...es },
-    'en-US': { ...en }
+    en
   }
 })

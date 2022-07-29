@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-50 top-0 left-0 p-3 lg:p-6 flex w-full bg-white bg-opacity-90"
+    class="fixed z-50 top-0 left-0 p-3 lg:p-6 flex w-full dark:bg-black/90 transition-all ease-in-out duration-300 bg-white bg-opacity-90"
   >
     <div class="mx-auto w-full" style="max-width: 1024px">
       <div class="flex w-full md:flex-row justify-between items-center">
@@ -28,21 +28,57 @@
             </li>
           </ul>
         </div>
+        <div>
+          <select
+            id="lang-select"
+            v-model="$i18n.locale"
+            class="hidden md:inline-block transition-all duration-300 ease-in-out bg-gray-100 dark:bg-gray-600 rounded-sm p-1 font-bold dark:text-white"
+            name="language"
+            @change="setLang($event.target.value)"
+          >
+            <option
+              v-for="locale in $i18n.availableLocales"
+              :key="`locale-${locale}`"
+              :value="locale"
+            >
+              {{ locale.toUpperCase() }}
+            </option>
+          </select>
 
-        <btn class="hidden md:inline-block">
-          {{ $t('navbar.contactMe') }}
-        </btn>
-        <button class="px-4 py-2 md:hidden z-50" @click="openMenu()">
-          <div id="line-1" class="border mb-1 border-black w-6" />
-          <div id="line-2" class="border mb-1 border-black w-6" />
-          <div id="line-3" class="border border-black w-6" />
+          <span class="hidden md:inline-block mx-3 dark:text-white/20">|</span>
+
+          <btn
+            link
+            href="mailto:haniel1121@outlook.com"
+            class="hidden md:inline-block"
+          >
+            {{ $t('navbar.contactMe') }}
+          </btn>
+        </div>
+
+        <button
+          class="p-2 dark:bg-white/10 rounded-full w-12 h-12 bg-gray-200 md:hidden z-50"
+          @click="openMenu()"
+        >
+          <div
+            id="line-1"
+            class="border mb-1 mx-auto rounded-xl dark:border-white border-black w-6"
+          />
+          <div
+            id="line-2"
+            class="border mb-1 mx-auto rounded-xl dark:border-white border-black w-6"
+          />
+          <div
+            id="line-3"
+            class="border mx-auto rounded-xl dark:border-whiteborder-black w-6"
+          />
         </button>
       </div>
     </div>
     <transition :css="false" mode="out-in" @enter="onEnter" @leave="onLeave">
       <div
         v-if="menuOpen"
-        class="menu z-40 ease-out bg-white w-screen h-screen bg-opacity-90 fixed top-0 left-0"
+        class="menu z-40 ease-out bg-white dark:bg-black/80 w-screen h-screen bg-opacity-90 fixed top-0 left-0"
       >
         <ul class="flex h-full flex-col justify-center items-center">
           <li
@@ -51,7 +87,11 @@
             :ref="(el) => (links[index] = el)"
             class="nav-link-container text-center"
           >
-            <navbar-link :to="route.path">
+            <navbar-link
+              :active="route.path == currentRoute"
+              :to="route.path"
+              @click="menuOpen = false"
+            >
               {{ $t(route.text) }}
             </navbar-link>
           </li>
@@ -310,6 +350,10 @@ export default {
 
       tl.play()
     }
+
+    const setLang = (value) => {
+      localStorage.setItem('lang', value)
+    }
     return {
       links,
       openMenu,
@@ -317,7 +361,8 @@ export default {
       beforeEnter,
       onLeave,
       onEnter,
-      changeLightMode
+      changeLightMode,
+      setLang
     }
   },
   computed: {

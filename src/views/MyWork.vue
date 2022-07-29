@@ -41,7 +41,9 @@ const experiences = ref([
         :key="`${index}-experience`"
         class="flex flex-col md:flex-row cursor-default items-center opacity-75 duration-300 hover:opacity-100 transition-all ease-in-out"
       >
-        <div class="md:w-2/6 px-3 lg:px-0 py-4 font-bold text-gray-500">
+        <div
+          class="md:w-2/6 px-3 lg:px-0 py-4 font-bold text-gray-500 dark:text-gray-400"
+        >
           <p>{{ experience.from }} - {{ experience.to }}</p>
         </div>
         <div class="w-full md:w-4/6 px-3 lg:px-0 py-4">

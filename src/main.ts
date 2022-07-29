@@ -8,13 +8,14 @@ import config from './config'
 import { i18n } from './i18n/i18n'
 import './assets/tailwind.css'
 
+const lang = localStorage.getItem('lang')
 const app = createApp(App)
 app.provide('config', config)
 
 Object.keys(globals).forEach((componentName) => {
   app.component(componentName, globals[componentName])
 })
-console.log('LANG ', navigator.language)
+console.log('LANG ', lang || navigator.language)
 app.config.globalProperties.$config = config
 app.use(i18n)
 app.use(store)

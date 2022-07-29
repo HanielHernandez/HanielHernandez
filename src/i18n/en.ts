@@ -39,7 +39,9 @@ export default {
           'With Fullstack labs I worked as a mid-level developer fixing bugs and making UI Changes on one of their internal system apps.'
       },
       drs: {
-        title: 'Juntio Web Developer'
+        title: 'Junior Web Developer',
+        description:
+          'At Discover Real state I was in charge of maintaining and creating new modules for one of their internal apps using Jquery.'
       },
       aims: {
         title: 'Front-End Developer',
