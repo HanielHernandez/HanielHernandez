@@ -19,7 +19,7 @@ export default {
         0
       )
       tl.from(
-        '.graph',
+        el.getElementsByClassName('graph'),
         {
           opacity: 0,
           scale: 0,
