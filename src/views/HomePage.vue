@@ -38,7 +38,7 @@
     <div
       class="flex justify-center items-center w-full md:w-1/2 md:h-full px-4"
     >
-      <img src="../assets/img/home_graph.svg" class="w-full h-auto" />
+      <img src="../assets/img/home_graph.svg" class="graph w-full h-auto" />
     </div>
   </div>
 </template>

@@ -1,27 +1,27 @@
 import gsap from 'gsap'
-
 export default {
   onEnter: (el: HTMLElement, done: () => void) => {
     const tl = gsap.timeline({
       onComplete: done
     })
+
     tl.from(
-      el.getElementsByClassName('title'),
+      '#rightSide >*',
       {
+        stagger: 0.1,
         opacity: 0,
-        duration: 0.5,
-        ease: 'power3.easeInOut'
+        x: -30,
+        duration: 1,
+        ease: 'back.inOut(10)'
       },
       0
     )
-
     tl.from(
-      el.getElementsByClassName('experience-row'),
+      el.getElementsByClassName('graph'),
       {
         opacity: 0,
-        x: 30,
+        scale: 0,
         duration: 1,
-        stagger: 0.1,
         ease: 'back.inOut(1.7)'
       },
       0
@@ -33,23 +33,22 @@ export default {
     const tl = gsap.timeline({
       onComplete: done
     })
-    tl.to(
-      '#title',
-      {
-        opacity: 0,
-        duration: 0.5,
-        ease: 'power3.easeInOut'
-      },
-      0
-    )
+
+    tl.to('#rightSide >*', {
+      stagger: 0.1,
+      opacity: 0,
+      x: -30,
+      duration: 1,
+      ease: 'back.inOut(1.7)'
+    })
 
     tl.to(
-      el.getElementsByClassName('experience-row'),
+      '.graph',
       {
         opacity: 0,
-        x: 300,
-        duration: 0.3,
-        stagger: 0.1
+        scale: 0,
+        duration: 1,
+        ease: 'back.inOut(1.7)'
       },
       0
     )

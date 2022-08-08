@@ -2,6 +2,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import SectionTitle from '../components/SectionTitle.vue'
+import MyProjets from '../components/MyProjets.vue'
 const experiences = ref([
   {
     companyName: 'FullStacklabs',
@@ -28,43 +29,40 @@ const experiences = ref([
 ])
 </script>
 <template>
-  <div>
-    <div class="px-3 lg:px-0">
-      <SectionTitle>
-        {{ $t('myWork.professionalExperience.title') }}
-      </SectionTitle>
-    </div>
+  <div class="h-full flex flex-col">
+    <SectionTitle id="title">
+      {{ $t('myWork.professionalExperience.title') }}
+    </SectionTitle>
 
-    <div class="flex flex-col">
+    <div
+      v-for="(experience, index) in experiences"
+      :key="`${index}-experience`"
+      class="experience-row flex flex-col md:flex-row cursor-default items-center"
+    >
       <div
-        v-for="(experience, index) in experiences"
-        :key="`${index}-experience`"
-        class="flex flex-col md:flex-row cursor-default items-center opacity-75 duration-300 hover:opacity-100 transition-all ease-in-out"
+        class="md:w-2/6 px-3 lg:px-0 py-4 font-bold text-gray-500 dark:text-gray-400"
       >
+        <p>{{ experience.from }} - {{ experience.to }}</p>
+      </div>
+      <div class="w-full md:w-4/6 px-3 lg:px-0 py-4">
         <div
-          class="md:w-2/6 px-3 lg:px-0 py-4 font-bold text-gray-500 dark:text-gray-400"
+          class="bg-blue-200 border-cyan-600 border p-4 rounded-sm transition-color ease-in-out duration-300 hover:shadow-md"
         >
-          <p>{{ experience.from }} - {{ experience.to }}</p>
-        </div>
-        <div class="w-full md:w-4/6 px-3 lg:px-0 py-4">
-          <div
-            class="bg-blue-200 border-cyan-600 border p-4 rounded-sm transition-all ease-in-out duration-300 hover:shadow-md"
-          >
-            <h4 class="text-lg font-bold text-gray-800">
-              {{ $t(`myWork.professionalExperience.${experience.id}.title`) }}
-            </h4>
-            <h3 class="text-gray-500 text-sm my-1">
-              {{ experience.companyName }}
-            </h3>
-            <p
-              class="text-gray-600 text-justify"
-              v-html="
-                $t(`myWork.professionalExperience.${experience.id}.description`)
-              "
-            ></p>
-          </div>
+          <h4 class="text-lg font-bold text-gray-800">
+            {{ $t(`myWork.professionalExperience.${experience.id}.title`) }}
+          </h4>
+          <h3 class="text-gray-500 text-sm my-1">
+            {{ experience.companyName }}
+          </h3>
+          <p
+            class="text-gray-600 text-justify"
+            v-html="
+              $t(`myWork.professionalExperience.${experience.id}.description`)
+            "
+          ></p>
         </div>
       </div>
     </div>
+    <MyProjets />
   </div>
 </template>

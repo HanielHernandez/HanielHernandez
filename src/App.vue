@@ -1,6 +1,6 @@
 <template>
   <div
-    class="transition-all ease-in-out duration-300"
+    class="transition-all pt-24 ease-in-out duration-300 w-full h-screen overflow-y-auto"
     :class="{ dark: darkmode, 'bg-neutral-900': darkmode }"
   >
     <the-navbar
@@ -11,10 +11,20 @@
       @on-change-light-mode="changeLightMode"
     />
     <div
-      class="w-full h-screen relative overflow-y-auto oveflow-x-hidden mx-auto pt-36 transition-colors ease-in-out duration-300"
+      class="mx-auto h-full transition-colors ease-in-out duration-300"
       style="max-width: 1024px"
     >
-      <router-view></router-view>
+      <router-view v-slot="{ Component }">
+        <transition
+          mode="out-in"
+          @enter="transitionEnter"
+          @leave="transitionLeave"
+          :css="false"
+        >
+          <component :is="Component" />
+        </transition>
+      </router-view>
+
       <div
         ref="modeIcon"
         class="change-theme-button"
@@ -52,6 +62,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { gsap } from 'gsap'
+import animations from './animations'
 
 const route = useRoute()
 const modeIcon = ref<HTMLElement | null>(null)
@@ -59,14 +70,32 @@ const mode = localStorage.getItem('mode')
 const darkmode = ref(mode == 'dark')
 
 const routeName = computed(() => {
-  return route.name
+  return route.name?.toString()
 })
+
+const curretRoute = ref<string | null>(null)
 
 onMounted(() => {
   if (modeIcon.value) {
     modeIcon.value.style.backgroundColor = mode == 'dark' ? '#000' : '#FFF'
   }
 })
+
+const transitionEnter = (el: HTMLElement, done: () => void) => {
+  curretRoute.value = route.name?.toString() || null
+  console.log(`Entering route ${curretRoute.value?.toLocaleLowerCase()}`, el)
+
+  if (curretRoute.value) {
+    animations[curretRoute.value.toLowerCase()].onEnter(el, done)
+  }
+}
+
+const transitionLeave = (el: HTMLElement, done: () => void) => {
+  console.log(`Leaving route ${curretRoute.value?.toLocaleLowerCase()}`, el)
+  if (curretRoute.value) {
+    animations[curretRoute.value.toLowerCase()].onLeave(el, done)
+  }
+}
 
 const onSunEnter = (el: HTMLElement, done: () => void) => {
   const beams = el.getElementsByClassName('beam')
@@ -156,7 +185,7 @@ const onSunLeave = (el: HTMLElement, done: () => void) => {
       opacity: 0
     })
     tl.to(modeIcon.value, {
-      backgroundColor: '#fff'
+      backgroundColor: 'rgb(25,25,25)'
     })
   } else {
     tl.to(
@@ -186,11 +215,12 @@ const changeLightMode = () => {
   localStorage.setItem('mode', darkmode.value ? 'dark' : 'light')
 }
 </script>
+
 <style lang="scss" scoped>
 .change-theme-button {
   overflow: hidden;
-  @apply w-14 h-14 z-30 p-2 right-4 bg-white border rounded-full fixed
-    bottom-10 shadow-md;
+  @apply w-14 h-14 z-30 p-2 right-8 bg-white border dark:border-neutral-400 rounded-full fixed
+    bottom-10  shadow-md;
 }
 .sun {
   position: relative;
@@ -202,7 +232,7 @@ const changeLightMode = () => {
   width: 100%;
   height: 100%;
   .center {
-    @apply bg-black rounded-full absolute;
+    @apply bg-neutral-800 rounded-full absolute;
     width: 100%;
     height: 100%;
     z-index: 100;

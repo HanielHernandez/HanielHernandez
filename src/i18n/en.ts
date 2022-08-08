@@ -48,6 +48,17 @@ export default {
         description:
           'At <b> AIM services </b> I was in charge of: <ul class="list-disc pl-8"> <li>  Creating front-end web applications with  javascript frameworks like Angular and Vue.</li>		<li>		Creating custom APIs from the ground and integrating them with third-party services like Twilio, Paypal, Firebase, and Pusher.</li><li>Creating Native android applications as well as hybrid mobile apps.</li><li>Creating Mockups of the final look of the app</li><li>Planing The Project’s development and defining tasks for them.</li>'
       }
+    },
+    projects: {
+      title: 'Proyects',
+      customizableCss: {
+        description:
+          'A CSS framework inspire by tailwind and bulma, created with SASS and documentation was made with the help of nuxt js'
+      },
+      fireChat: {
+        description:
+          'A Real time Messaging application created with the help of vue, tailwind and firebase'
+      }
     }
   }
 }

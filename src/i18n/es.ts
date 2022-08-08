@@ -47,6 +47,17 @@ export default {
         description:
           'En <b>AIM Services</b> estaba a cargo de:<ul class="list-disc pl-8"> <li>Crear Aplicaciones webs usando frameworks de javascript como Angular y Vue.</li> <li>Crear APIs personalizadas desde cero e integralas con servicios de terceros como Twilio, Paypal, Firebase, Y Pusher.</li> <li>Crear aplicaciones móbiles en Android nativo (Java) así comó híbridas (IONIC)</li> <li>Crear Mockups para definirl la apariencia final de aplicaciones.</li> <li>Planear el desarrollo de los proyectos así cómo la definición de tareas para estos..</li> </ul>  '
       }
+    },
+    projects: {
+      title: 'Proyectos',
+      customizableCss: {
+        description:
+          'Un mini framework de css inspirado en Tailwind y Bulma, la documentación fué creada con Nuxtjs'
+      },
+      fireChat: {
+        description:
+          'Una aplicación de mensajería en tiempo real creada con tailwind, vue y firebase'
+      }
     }
   },
   cv: {
