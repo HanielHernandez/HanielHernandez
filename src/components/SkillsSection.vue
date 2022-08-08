@@ -73,7 +73,9 @@ const skills = ref([
           class="skill-card-icon object-contain w-12 h-12"
           :alt="`${skill.text} icon`"
         />
-        <div class="skill-card-text text-white font-bold bg-black/50">
+        <div
+          class="skill-card-text text-white font-bold bg-black/50 dark:bg-neutral-600/95"
+        >
           {{ skill.text }}
         </div>
       </div>
@@ -84,6 +86,7 @@ const skills = ref([
 .skill-card {
   @apply p-4 mb-4 rounded-md;
   &:hover {
+    @apply dark:bg-neutral-700/50;
     .skill-card {
       &-icon {
         transform: scale(1.25);
