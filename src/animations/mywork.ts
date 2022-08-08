@@ -45,7 +45,7 @@ export default {
       onComplete: done
     })
     tl.to(
-      '#title',
+      '#title ,#my_projects_title',
       {
         opacity: 0,
         duration: 0.5,
@@ -64,6 +64,19 @@ export default {
       },
       0
     )
+    tl.to(
+      el.getElementsByClassName('card'),
+      {
+        opacity: 0,
+        y: -30,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'back.inOut(1.7)'
+      },
+      0
+    )
+
+    tl.play()
 
     tl.play()
   }

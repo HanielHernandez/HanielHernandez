@@ -51,6 +51,7 @@ export default {
     },
     projects: {
       title: 'Proyects',
+      view: 'View',
       customizableCss: {
         description:
           'A CSS framework inspire by tailwind and bulma, created with SASS and documentation was made with the help of nuxt js'

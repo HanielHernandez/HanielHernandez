@@ -50,6 +50,7 @@ export default {
     },
     projects: {
       title: 'Proyectos',
+      view: 'Ver',
       customizableCss: {
         description:
           'Un mini framework de css inspirado en Tailwind y Bulma, la documentación fué creada con Nuxtjs'

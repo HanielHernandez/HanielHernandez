@@ -22,7 +22,7 @@ const projects = [
 <template>
   <div class="w-full block">
     <div class="block p-4 lg:p-0">
-      <SectionTitle mbg-0>
+      <SectionTitle id="my_projects_title">
         {{ $t('myWork.projects.title') }}
       </SectionTitle>
     </div>
@@ -47,7 +47,7 @@ const projects = [
                 target="_blank"
                 :href="project.link"
                 class="opacity-75 hover:opacity-100 font-bold text-blue-600"
-                >View</a
+                >{{ $t('myWork.projects.view') }}</a
               >
               <div class="mt-4">
                 <div v-for="tag in project.tags" :key="tag" class="pill">
