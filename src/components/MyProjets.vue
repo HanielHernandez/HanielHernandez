@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import customizable from '../assets/img/customizable_css.png'
+import fireChat from '../assets/img/firechat.png'
+
 const projects = [
   {
     id: 'customizableCss',
@@ -6,7 +9,7 @@ const projects = [
     description:
       'A CSS framework inspire by tailwind and bulma, documentation was made with the help of nuxt js',
     tags: ['Nuxtjs', 'SASS', 'Algolia'],
-    imageUrL: 'img/customizable_css.png',
+    imageUrL: customizable,
     link: 'https://hanielhernandez.github.io/custom-css/'
   },
   {
@@ -14,7 +17,7 @@ const projects = [
     name: 'Fire Chat',
     description: 'A Real time Messaging application ',
     tags: ['Vue', 'Tailwind', 'Firebase'],
-    imageUrL: 'img/firechat.png',
+    imageUrL: fireChat,
     link: 'https://firechat-c857f.web.app/'
   }
 ]
