@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import Btn from './Btn.vue'
 import gsap from 'gsap'
 import config from '../config'
@@ -17,6 +17,13 @@ const menuOpen = ref(false)
 const openMenu = () => {
   menuOpen.value = !menuOpen.value
 }
+onMounted(() => {
+  gsap.from('.nav', {
+    y: -30,
+    opacity: 0,
+    duration: 1
+  })
+})
 
 const getTimeline = (el: HTMLElement, done: () => void) => {
   const tl = gsap.timeline({
@@ -242,11 +249,14 @@ const setLang = () => {
 </script>
 <template>
   <div
-    class="fixed z-50 top-0 left-0 p-3 lg:p-6 flex w-full dark:bg-neutral-900/90 transition-all ease-in-out duration-300 bg-white"
+    class="nav fixed z-50 top-0 left-0 p-3 lg:p-6 flex w-full dark:bg-neutral-900/90 transition-colors ease-in-out duration-300 bg-white"
   >
     <div class="mx-auto w-full" style="max-width: 1024px">
       <div class="flex w-full md:flex-row justify-between items-center">
-        <a href="" class="md:text-xl uppercase font-black logo text-blue-600">
+        <a
+          href=""
+          class="icon md:text-xl uppercase font-black logo text-blue-600"
+        >
           Haniel FED
         </a>
 
