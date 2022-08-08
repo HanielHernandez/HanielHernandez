@@ -13,20 +13,21 @@
         {{ $t('home.firstLine') }}
       </h2>
       <h1
-        class="text-center md:text-left leading md:leading-5 font-black text-3xl ling md:text-3xl lg:text-5xl mb-8 text-gray-800 md:mb-12 dark:text-white"
+        class="text-center md:text-left leading font-black text-3xl ling md:text-3xl lg:text-5xl mb-8 text-gray-800 md:mb-12 dark:text-white"
       >
         {{ $t('home.secondLine') }}
       </h1>
       <p
-        class="text-center text-gray-600 dark:text-gray-400 mb-8"
+        class="text-center md:text-left text-gray-600 dark:text-gray-400 mb-8"
         style="max-width: 650px"
       >
         {{ $t('home.paragraph') }}
       </p>
       <div class="flex items-center justify-center md:justify-start">
-        <a
+        <RouterLink
+          to="/my-work"
           class="bg-blue-600 md:text-lg lg:text-xl font-bold transition-all ease-in-out btn shadow-md duration-300 hover:bg-blue-800 mr-4 border-ra text-white px-4 py-3 md:px-5 md:py-4 lg:px-5 lg:py-3 rounded-sm"
-          >{{ $t('home.myWorkBtn') }}</a
+          >{{ $t('home.myWorkBtn') }}</RouterLink
         >
         <a
           href="mailto:haniel1121@outlook.com"

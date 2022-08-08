@@ -20,9 +20,9 @@ export default {
     title: 'Acerca de Mí',
     paragraph1: `Hola 👋, Mi Nombre es <b> Haniel Hernández </b>, soy un Desarrollador Front-End, actualmente resido en <b> Nicaragua</b>, he estado trabajando en desarrollo web desde 2017 después de Graduarme como Ingeniero en sistemas en <b> UCA (Universidad Centraomericana, Managua, Nicaragua)</b>.`,
     paragraph2:
-      'Lo que me gusta del desarrollo front end es que es la parte de una aplicación que interactua con el usuario y le brinda la experiencia final. en cierta manera la considero un arte ya que creas un item en base a tus ideas y creatividad.',
+      'Lo que me gusta del desarrollo front end es que es la parte de una aplicación que interactua con el usuario y le brinda la experiencia final. en cierta manera la considero un arte ya que basicamente expresas tus idea mediantes elementos visuales',
     paragraph3:
-      'De ninguna manera me considero un experto en la materia, todavía tengo un largo camino que recorrer en mi aprendizaje como desarrollador, ahora bien, con los ultimos que he trabajado siento que he adquirido conocimiento y experiencia que me qualifican como un desarrollador competente, con facilidad de aprendizaje y resolución de problemas. dispuesto a ayudar a su equipo para lograr las metas propuestas y poder avanzar.',
+      'De ninguna manera me considero el desarrollador mas "Top", todavía tengo un largo camino que recorrer en mi aprendizaje, ahora bien, con los últimos que he trabajado siento que he adquirido conocimiento y experiencia que me qualifican como un desarrollador competente, con facilidad de aprendizaje y resolución de problemas. dispuesto a ayudar a su equipo a alcanzar las metas propuestas y entregar sofware de calidad.',
     skills: {
       title: 'Mis Conocimientos'
     }

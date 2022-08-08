@@ -64,7 +64,7 @@ const projects = [
 
 <style lang="scss" scoped>
 .card {
-  @apply cursor-default relative border rounded overflow-hidden shadow-sm border-neutral-300  dark:border-neutral-700;
+  @apply cursor-default relative border rounded overflow-hidden shadow-sm border-neutral-200  dark:border-neutral-700;
   &-title {
     @apply font-medium text-neutral-800 dark:text-neutral-100 mb-2;
     &:hover {
@@ -74,12 +74,13 @@ const projects = [
 
   &-media {
     img {
+      @apply rounded-t-sm;
       object-fit: cover;
       height: 250px;
     }
   }
   &-content {
-    @apply p-4 absolute bottom-0 left-0   bg-white bg-opacity-75 dark:bg-neutral-800 w-full transition-all;
+    @apply p-4 absolute bottom-0 left-0  rounded-b-sm  bg-white bg-opacity-75 dark:bg-neutral-800 w-full transition-all;
     height: 84px;
   }
 

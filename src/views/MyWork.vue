@@ -30,7 +30,7 @@ const experiences = ref([
 </script>
 <template>
   <div class="h-full flex flex-col">
-    <SectionTitle id="title">
+    <SectionTitle id="title" class="px-4 md:px-0">
       {{ $t('myWork.professionalExperience.title') }}
     </SectionTitle>
 

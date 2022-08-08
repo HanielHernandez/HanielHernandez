@@ -18,12 +18,12 @@ export default {
   position: 'Front End Developer',
   aboutMe: {
     title: 'About Me',
-    paragraph1: `Hi, My Name Is Haniel Hernández, I'm a Front-End We developer currently living in Nicaragua, 
-      I started working on web development back in 2017 after graduating as a System Engeneering at UCA (Universidad Centroamericana), obviusly I'm no senior developer who has the answer to every problem, but throught the years i`,
+    paragraph1: `Hi, My Name Is <b>Haniel Hernández</b>, I'm a <b>Front-End Web developer </b> currently living in  <b>Nicaragua</b>,  
+      I started working on web development back in <b>2017</b> after graduating as a System Engeneering at <b>UCA (Universidad Centroamericana, Managua, Nicaragua)</b>`,
     paragraph2:
-      'Lo que me gusta del desarrollo front end es que es la parte de una aplicación que interactua con el usuario y le brinda la experiencia final. en cierta manera la considero un arte ya que creas un item en base a tus ideas y creatividad.',
+      "What I like about Front-End Web development it's that is the part of the application that the final clients interacts with, the final experinece, and in a certain way  it's an art in the sense that your'e using your creativity to share Ideas through visual elements.",
     paragraph3:
-      'De ninguna manera me considero un experto en la materia, todavía tengo un largo camino que recorrer en mi aprendizaje como desarrollador, ahora bien, con los ultimos que he trabajado siento que he adquirido conocimiento y experiencia que me qualifican como un desarrollador competente, con facilidad de aprendizaje y resolución de problemas. dispuesto a ayudar a su equipo para lograr las metas propuestas y poder avanzar.',
+      "By no means I consider my self to be the absolute web developer, I have a long way to run yet, but trough the latest years I've gain quite some experience that in my opinion  makes me a quite capable web developer, able to learn fast and solve problems, and that would help your team you reach their goals and deliver quality software",
     skills: {
       title: 'My Skills'
     }
