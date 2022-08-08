@@ -26,6 +26,17 @@ export default {
       },
       0
     )
+    tl.from(
+      el.getElementsByClassName('card'),
+      {
+        opacity: 0,
+        y: -30,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'back.inOut(1.7)'
+      },
+      0
+    )
 
     tl.play()
   },

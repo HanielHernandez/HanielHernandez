@@ -5,7 +5,7 @@ const projects = [
     name: 'Customizable Css',
     description:
       'A CSS framework inspire by tailwind and bulma, documentation was made with the help of nuxt js',
-    tags: ['Nuxtjs', 'SASS'],
+    tags: ['Nuxtjs', 'SASS', 'Algolia'],
     imageUrL: 'customizable_css.png',
     link: 'https://hanielhernandez.github.io/custom-css/'
   },
@@ -39,10 +39,16 @@ const projects = [
           </div>
           <div class="card-content">
             <p class="card-title">
-              <a target="_blank" :href="project.link">{{ project.name }}</a>
+              {{ project.name }}
             </p>
             <div class="card-description">
-              {{ $t('myWork.projects.' + project.id + '.description') }}
+              {{ $t('myWork.projects.' + project.id + '.description') }} <br />
+              <a
+                target="_blank"
+                :href="project.link"
+                class="opacity-75 hover:opacity-100 font-bold text-blue-600"
+                >View</a
+              >
               <div class="mt-4">
                 <div v-for="tag in project.tags" :key="tag" class="pill">
                   {{ tag }}
@@ -58,9 +64,12 @@ const projects = [
 
 <style lang="scss" scoped>
 .card {
-  @apply cursor-pointer relative border rounded overflow-hidden shadow-sm border-neutral-300  dark:border-neutral-700;
+  @apply cursor-default relative border rounded overflow-hidden shadow-sm border-neutral-300  dark:border-neutral-700;
   &-title {
     @apply font-medium text-neutral-800 dark:text-neutral-100 mb-2;
+    &:hover {
+      @apply text-blue-600;
+    }
   }
 
   &-media {
