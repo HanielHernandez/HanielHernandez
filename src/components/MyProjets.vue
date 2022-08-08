@@ -6,7 +6,7 @@ const projects = [
     description:
       'A CSS framework inspire by tailwind and bulma, documentation was made with the help of nuxt js',
     tags: ['Nuxtjs', 'SASS', 'Algolia'],
-    imageUrL: 'customizable_css.png',
+    imageUrL: 'img/customizable_css.png',
     link: 'https://hanielhernandez.github.io/custom-css/'
   },
   {
@@ -14,7 +14,7 @@ const projects = [
     name: 'Fire Chat',
     description: 'A Real time Messaging application ',
     tags: ['Vue', 'Tailwind', 'Firebase'],
-    imageUrL: 'firechat.png',
+    imageUrL: 'img/firechat.png',
     link: 'https://firechat-c857f.web.app/'
   }
 ]
@@ -35,7 +35,7 @@ const projects = [
       >
         <div class="card">
           <div class="card-media">
-            <img :src="`img/${project.imageUrL}`" alt="" />
+            <img :src="project.imageUrL" alt="" />
           </div>
           <div class="card-content">
             <p class="card-title">
