@@ -12,7 +12,8 @@ export default {
         opacity: 0,
         x: -30,
         duration: 1,
-        ease: 'back.inOut(10)'
+        ease: 'back.inOut(10)',
+        clearProps: 'all'
       },
       0
     )
@@ -22,7 +23,8 @@ export default {
         opacity: 0,
         scale: 0,
         duration: 1,
-        ease: 'back.inOut(1.7)'
+        ease: 'back.inOut(1.7)',
+        clearProps: 'all'
       },
       0
     )
