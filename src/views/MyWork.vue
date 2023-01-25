@@ -5,7 +5,15 @@ import SectionTitle from '../components/SectionTitle.vue'
 import MyProjets from '../components/MyProjets.vue'
 const experiences = ref([
   {
-    companyName: 'FullStacklabs',
+    companyName: 'Curotec - Wayne, Pennsylvania.',
+    from: 'Oct. 2022',
+    to: 'Feb. 2023',
+    position: 'myWork.professionalExperience.curotec.title',
+    backgroundColor: '',
+    id: 'curotec'
+  },
+  {
+    companyName: 'FullStacklabs - Granite Bay, California',
     from: 'Mar. 2022',
     to: 'Jul. 2022',
     position: 'myWork.professionalExperience.fsl.title',
@@ -13,14 +21,14 @@ const experiences = ref([
     id: 'fsl'
   },
   {
-    companyName: 'AIM services',
+    companyName: 'AIM services - Ticuantepe, Nicaragua.',
     from: 'Feb. 2019',
     to: 'Mar. 2022',
     id: 'aims',
     backgroundColor: 'bg-yellow-100 border-orange-300'
   },
   {
-    companyName: 'Discovery Real State',
+    companyName: 'Discovery Real State - Managua, Nicaragua.',
     from: 'Nov. 2017',
     to: 'Jun. 2018',
     id: 'drs',
@@ -34,32 +42,23 @@ const experiences = ref([
       {{ $t('myWork.professionalExperience.title') }}
     </SectionTitle>
 
-    <div
-      v-for="(experience, index) in experiences"
-      :key="`${index}-experience`"
-      class="experience-row flex flex-col md:flex-row cursor-default items-center"
-    >
-      <div
-        class="md:w-2/6 px-3 lg:px-0 py-4 font-bold text-gray-500 dark:text-gray-400"
-      >
+    <div v-for="(experience, index) in experiences" :key="`${index}-experience`"
+      class="experience-row flex flex-col md:flex-row cursor-default items-center">
+      <div class="md:w-2/6 px-3 lg:px-0 py-4 font-bold text-gray-500 dark:text-gray-400">
         <p>{{ experience.from }} - {{ experience.to }}</p>
       </div>
       <div class="w-full md:w-4/6 px-3 lg:px-0 py-4">
         <div
-          class="bg-blue-200 border-cyan-600 border p-4 rounded-sm transition-color ease-in-out duration-300 hover:shadow-md"
-        >
+          class="bg-blue-200 border-cyan-600 border p-4 rounded-sm transition-color ease-in-out duration-300 hover:shadow-md">
           <h4 class="text-lg font-bold text-gray-800">
-            {{ $t(`myWork.professionalExperience.${experience.id}.title`) }}
+            {{ $t(`myWork.professionalExperience.${experience.id }.title`) }}
           </h4>
           <h3 class="text-gray-500 text-sm my-1">
             {{ experience.companyName }}
           </h3>
-          <p
-            class="text-gray-600 text-justify"
-            v-html="
-              $t(`myWork.professionalExperience.${experience.id}.description`)
-            "
-          ></p>
+          <p class="text-gray-600 text-justify" v-html="
+            $t(`myWork.professionalExperience.${ experience.id }.description`)
+          "></p>
         </div>
       </div>
     </div>
