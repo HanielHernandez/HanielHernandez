@@ -55,7 +55,7 @@ export default {
       }
     },
     projects: {
-      title: 'Proyects',
+      title: 'Projects',
       view: 'View',
       customizableCss: {
         description:
