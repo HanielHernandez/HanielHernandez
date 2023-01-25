@@ -34,7 +34,7 @@ export default {
     professionalExperience: {
       title: 'Professional Experience',
       curotec: {
-        title: 'Vue Js developer',
+        title: 'Vue Js Developer',
         description:
           'At Curotec I worked as part of the staff augmentation team, fixing bugs and making UI Changes for one of their clients, a multinational health company.'
       },

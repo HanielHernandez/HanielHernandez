@@ -32,6 +32,11 @@ export default {
     subtitle: 'Estos son algunos proyectos en los que he trabajado',
     professionalExperience: {
       title: 'Experiencia Profesional',
+      curotec: {
+        title: 'Vue Js Developer',
+        description:
+          'En Curotec trabajé como parte del equipo de Staff Augmentation, reparando Bugs y realizando cambio a la UI de uno de sus clientes, una compañia multinacional de salud y bienester.'
+      },
       fsl: {
         title: 'Desarrollador Front-End Nivel-Medio',
         description:
