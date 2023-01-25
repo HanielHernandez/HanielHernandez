@@ -1,41 +1,17 @@
 <template>
-  <div
-    class="transition-all pt-24 ease-in-out duration-300 w-full h-screen overflow-y-auto"
-    :class="{ dark: darkmode, 'bg-neutral-900': darkmode }"
-  >
-    <the-navbar
-      v-if="routeName != 'MyCV'"
-      id="navbar"
-      :dark-mode="darkmode"
-      :class="{ dark: darkmode }"
-      @on-change-light-mode="changeLightMode"
-    />
-    <div
-      class="mx-auto h-full transition-colors ease-in-out duration-300"
-      style="max-width: 1024px"
-    >
+  <div class="transition-all pt-24 ease-in-out duration-300 w-full h-screen overflow-y-auto"
+    :class="{ dark: darkmode, 'bg-neutral-900': darkmode }">
+    <the-navbar v-if="routeName != 'MyCV'" id="navbar" :dark-mode="darkmode" :class="{ dark: darkmode }"
+      @on-change-light-mode="changeLightMode" />
+    <div class="mx-auto h-full transition-colors ease-in-out duration-300" style="max-width: 1024px">
       <router-view v-slot="{ Component }">
-        <transition
-          mode="out-in"
-          @enter="transitionEnter"
-          @leave="transitionLeave"
-          :css="false"
-        >
+        <transition mode="out-in" @enter="transitionEnter" @leave="transitionLeave" :css="false">
           <component :is="Component" />
         </transition>
       </router-view>
 
-      <div
-        ref="modeIcon"
-        class="change-theme-button"
-        @click="changeLightMode()"
-      >
-        <transition
-          mode="out-in"
-          :css="false"
-          @enter="onSunEnter"
-          @leave="onSunLeave"
-        >
+      <div ref="modeIcon" class="change-theme-button" @click="changeLightMode()">
+        <transition mode="out-in" :css="false" @enter="onSunEnter" @leave="onSunLeave">
           <div v-if="darkmode" class="icon sun">
             <div ref="modIconCenter" class="center"></div>
             <div ref="modIconCenterOff" class="off-center"></div>
@@ -58,7 +34,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-// import animations from '@/animations'
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { gsap } from 'gsap'
@@ -83,7 +58,6 @@ onMounted(() => {
 
 const transitionEnter = (el: HTMLElement, done: () => void) => {
   curretRoute.value = route.name?.toString() || null
-  console.log(`Entering route ${curretRoute.value?.toLocaleLowerCase()}`, el)
 
   if (curretRoute.value) {
     animations[curretRoute.value.toLowerCase()].onEnter(el, done)
@@ -91,7 +65,6 @@ const transitionEnter = (el: HTMLElement, done: () => void) => {
 }
 
 const transitionLeave = (el: HTMLElement, done: () => void) => {
-  console.log(`Leaving route ${curretRoute.value?.toLocaleLowerCase()}`, el)
   if (curretRoute.value) {
     animations[curretRoute.value.toLowerCase()].onLeave(el, done)
   }
@@ -102,7 +75,6 @@ const onSunEnter = (el: HTMLElement, done: () => void) => {
   const tl = gsap.timeline({
     onComplete: done
   })
-  console.log('activa enter', darkmode.value)
   if (darkmode.value == true) {
     tl.to(modeIcon.value, {
       backgroundColor: '#000'
@@ -166,7 +138,6 @@ const onSunLeave = (el: HTMLElement, done: () => void) => {
   const tl = gsap.timeline({
     onComplete: done
   })
-  console.log('activa leave', darkmode.value)
 
   if (darkmode.value == true) {
     const centerOff = el.getElementsByClassName('off-center')
@@ -219,24 +190,27 @@ const changeLightMode = () => {
 <style lang="scss" scoped>
 .change-theme-button {
   overflow: hidden;
-  @apply w-14 h-14 z-30 p-2 right-8 bg-white border dark:border-neutral-400 rounded-full fixed
-    bottom-10  shadow-md;
+  @apply w-14 h-14 z-30 p-2 right-8 bg-white border dark: border-neutral-400 rounded-full fixed bottom-10 shadow-md;
 }
+
 .sun {
   position: relative;
-  center {
-  }
+
+  center {}
 }
+
 .icon {
   position: relative;
   width: 100%;
   height: 100%;
+
   .center {
     @apply bg-neutral-800 rounded-full absolute;
     width: 100%;
     height: 100%;
     z-index: 100;
   }
+
   .off-center {
     position: absolute;
     top: 0;
@@ -259,6 +233,7 @@ const changeLightMode = () => {
       height: 1.5rem;
       transform: translate(50%, -50%);
     }
+
     .off-center {
       top: 50%;
       right: 50%;
@@ -269,6 +244,7 @@ const changeLightMode = () => {
       height: 1.375rem;
       transform: translate(50%, -50%);
     }
+
     .center,
     .off-center {
       z-index: 100;
@@ -279,6 +255,7 @@ const changeLightMode = () => {
       z-index: 80;
     }
   }
+
   .beam {
     position: absolute;
     opacity: 0;
@@ -303,9 +280,11 @@ const changeLightMode = () => {
     &-bottom-right {
       right: 4px;
     }
+
     &-center-right {
       right: 0;
     }
+
     &-center-left {
       left: 0;
     }
@@ -328,6 +307,7 @@ const changeLightMode = () => {
     &-bottom-left {
       top: calc(100% - 8px);
     }
+
     &-bottom {
       bottom: 0;
     }
