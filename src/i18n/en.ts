@@ -19,11 +19,11 @@ export default {
   aboutMe: {
     title: 'About Me',
     paragraph1: `Hi, My Name Is <b>Haniel Hernández</b>, I'm a <b>Front-End Web developer </b> currently living in  <b>Nicaragua</b>,  
-      I started working on web development back in <b>2017</b> after graduating as a System Engeneering at <b>UCA (Universidad Centroamericana, Managua, Nicaragua)</b>`,
+      I started working on web development back in <b>2017</b> after graduating as a System Engineering at <b>UCA (Universidad Centroamericana, Managua, Nicaragua)</b>`,
     paragraph2:
-      "What I like about Front-End Web development it's that is the part of the application that the final clients interacts with, the final experinece, and in a certain way  it's an art in the sense that your'e using your creativity to share Ideas through visual elements.",
+      "What I like about Front-End Web development it's that it is the part of the application that the final clients interact with, the final experience, and in a certain way it's an art in the sense that you're using your creativity to share Ideas through visual elements.",
     paragraph3:
-      "By no means I consider my self to be the absolute web developer, I have a long way to run yet, but trough the latest years I've gain quite some experience that in my opinion  makes me a quite capable web developer, able to learn fast and solve problems, and that would help your team you reach their goals and deliver quality software",
+      "By no means do I consider myself to be a master web developer, I have a long way to run yet, but through the last few years I've gained quite some experience that in my opinion makes me a pretty capable web developer, able to learn fast and solve problems, and that would help your team you reach their goals and deliver quality software help your team reach their goals.",
     skills: {
       title: 'My Skills'
     }
@@ -51,7 +51,7 @@ export default {
       aims: {
         title: 'Front-End Developer',
         description:
-          'At <b> AIM services </b> I was in charge of: <ul class="list-disc pl-8"> <li>  Creating front-end web applications with  javascript frameworks like Angular and Vue.</li>		<li>		Creating custom APIs from the ground and integrating them with third-party services like Twilio, Paypal, Firebase, and Pusher.</li><li>Creating Native android applications as well as hybrid mobile apps.</li><li>Creating Mockups of the final look of the app</li><li>Planing The Project’s development and defining tasks for them.</li>'
+          'At <b> AIM services </b> I was in charge of: <ul class="list-disc pl-8"> <li>Creating front-end web applications with  javascript frameworks like Angular and Vue.</li><li>Creating custom APIs from the ground up and integrating them with third-party libraries and services like Twilio, Paypal, Firebase, and Pusher.</li><li>Creating Native and hybrid android applications.</li><li>Creating Mockups in order to define the final look of an app or website.</li><li>Planning and defining tasks for Projects</li>'
       }
     },
     projects: {
