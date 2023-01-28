@@ -19,11 +19,11 @@ export default {
   aboutMe: {
     title: 'About Me',
     paragraph1: `Hi, My Name Is <b>Haniel Hernández</b>, I'm a <b>Front-End Web developer </b> currently living in  <b>Nicaragua</b>,  
-      I started working on web development back in <b>2017</b> after graduating as a System Engineering at <b>UCA (Universidad Centroamericana, Managua, Nicaragua)</b>`,
+      started working on web development back in <b>2017</b> after graduating as a System Engineering at <b>UCA (Universidad Centroamericana, Managua, Nicaragua)</b>`,
     paragraph2:
-      "What I like about Front-End Web development it's that it is the part of the application that the final clients interact with, the final experience, and in a certain way it's an art in the sense that you're using your creativity to share Ideas through visual elements.",
+      "What I like about Front-End Web development it's that it's the part of the application that the final clients interacts with, the final experience, and in a certain way it's an art in the sense that you're using your creativity to share Ideas through visual elements.",
     paragraph3:
-      "By no means do I consider myself to be a master web developer, I have a long way to run yet, but through the last few years I've gained quite some experience that in my opinion makes me a pretty capable web developer, able to learn fast and solve problems, and that would help your team you reach their goals and deliver quality software help your team reach their goals.",
+      "By no means do I consider myself to be a master web developer, I have a long way to run yet, but through this last few years I've gained quite some experience that in my opinion makes me a pretty capable web developer, able to learn fast and solve problems, and that would help your team you reach their goals and deliver quality software.",
     skills: {
       title: 'My Skills'
     }

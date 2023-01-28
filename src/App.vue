@@ -190,7 +190,7 @@ const changeLightMode = () => {
 <style lang="scss" scoped>
 .change-theme-button {
   overflow: hidden;
-  @apply w-14 h-14 z-30 p-2 right-8 bg-white border dark: border-neutral-400 rounded-full fixed bottom-10 shadow-md;
+  @apply w-14 h-14 z-30 p-2 right-8 bg-white border dark:border-neutral-400 rounded-full fixed bottom-10 shadow-md;
 }
 
 .sun {
